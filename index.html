@@ -15,11 +15,13 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- Character Selection -->
+    <div class="container-fluid">
+        <h1 class="text-center ">Character Select</h1>
         <div class="row">
             <div class="col">
-                <!-- Character Card -->
-                <div class="card" style="width: 15rem;">
+                <!-- Obi Card -->
+                <div id="obi" class="card h-100">
                     <img src="/assets/images/Obi-Wan Kenobi.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
                     <div class="card-body text-center">
                         <h5 class="card-title">Obi-Wan Kenobi</h5>
@@ -32,8 +34,8 @@
                 </div>
             </div>
             <div class="col">
-                <!-- Character Card -->
-                <div class="card" style="width: 15rem;">
+                <!-- Ani Card -->
+                <div id="anakin" class="card h-100">
                     <img src="/assets/images/Anakin Skywalker.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
                     <div class="card-body text-center">
                         <h5 class="card-title">Anakin Skywalker</h5>
@@ -46,8 +48,8 @@
                 </div>
             </div>
             <div class="col">
-                <!-- Character Card -->
-                <div class="card" style="width: 15rem;">
+                <!-- Maul Card -->
+                <div id="maul" class="card h-100">
                     <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
                     <div class="card-body text-center">
                         <h5 class="card-title">Darth Maul</h5>
@@ -60,8 +62,8 @@
                 </div>
             </div>
             <div class="col">
-                <!-- Character Card -->
-                <div class="card" style="width: 15rem;">
+                <!-- Sidious Card -->
+                <div id="sidious" class="card h-100">
                     <img src="/assets/images/Darth Sidious.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
                     <div class="card-body text-center">
                         <h5 class="card-title">Darth Sidious</h5>
@@ -75,7 +77,61 @@
             </div>
         </div>
     </div>
+    <!-- Select opponent warning -->
+    <p class="fs-4 text-danger text-center">*Pick Your Opp*</p>
+    <!-- Fight Section -->
+    <div class="container">
+        <!-- Player Name vs Opponent Name-->
+        <div class="row text-center">
+            <div class="col">
+                <h1>Player</h1>
+            </div>
+            <div class="col">
+                <h1>vs</h1>
+            </div>
+            <div class="col">
+                <h1>Opp</h1>
+            </div>
+        </div>
+        <!-- Arena -->
+        <div class="row text-center">
+            <div class="col">
+                <!-- Player -->
+                <div id="obi" class="card h-100">
+                    <img src="/assets/images/Obi-Wan Kenobi.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Obi-Wan Kenobi</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">H.P: 150</li>
+                        <li class="list-group-item">Attack Power: 8</li>
+                        <li class="list-group-item">Counter Attack Power: 12</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ATTACK! button -->
+            <div class="col m-auto text-center">
+                <button id="attackButton" type="button" class="btn btn-danger">ATTACK</button>
+            </div>
+            <div class="col ">
+                <!-- Opponent -->
+                <div id="maul" class="card h-100">
+                    <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Darth Maul</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">H.P: 125</li>
+                        <li class="list-group-item">Attack Power: 4</li>
+                        <li class="list-group-item">Counter Attack Power: 15</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    </div>
 </body>
 
 </html>
