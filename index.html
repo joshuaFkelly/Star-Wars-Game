@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/javascript/script.js" defer></script>
     <title>Star Wars Game</title>
@@ -23,55 +26,55 @@
                 <!-- Obi Card -->
                 <div id="obi" class="card h-100">
                     <img src="/assets/images/Obi-Wan Kenobi.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
-                    <div class="card-body text-center">
+                    <div class="card-body">
                         <h5 class="card-title">Obi-Wan Kenobi</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">H.P: 150</li>
-                        <li class="list-group-item">Attack Power: 8</li>
-                        <li class="list-group-item">Counter Attack Power: 12</li>
+                        <li id="obiHp" class="list-group-item">H.P: 150</li>
+                        <li id="obiAp" class="list-group-item">Attack Power: 8</li>
+                        <li id="obiCap" class="list-group-item">Counter Attack Power: 12</li>
                     </ul>
                 </div>
             </div>
             <div class="col">
                 <!-- Ani Card -->
                 <div id="anakin" class="card h-100">
-                    <img src="/assets/images/Anakin Skywalker.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
-                    <div class="card-body text-center">
+                    <img src="/assets/images/Anakin Skywalker.jpg" class="card-img-top" alt="Anakin Skywalker">
+                    <div class="card-body">
                         <h5 class="card-title">Anakin Skywalker</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">H.P: 170</li>
-                        <li class="list-group-item">Attack Power: 10</li>
-                        <li class="list-group-item">Counter Attack Power: 10</li>
+                        <li id="aniHp" class="list-group-item">H.P: 170</li>
+                        <li id="aniAp" class="list-group-item">Attack Power: 10</li>
+                        <li id="aniCap" class="list-group-item">Counter Attack Power: 10</li>
                     </ul>
                 </div>
             </div>
             <div class="col">
                 <!-- Maul Card -->
                 <div id="maul" class="card h-100">
-                    <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
+                    <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Darth Maul">
                     <div class="card-body text-center">
                         <h5 class="card-title">Darth Maul</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">H.P: 125</li>
-                        <li class="list-group-item">Attack Power: 4</li>
-                        <li class="list-group-item">Counter Attack Power: 15</li>
+                        <li id="maulHp" class="list-group-item">H.P: 125</li>
+                        <li id="maulAp" class="list-group-item">Attack Power: 4</li>
+                        <li id="maulCap" class="list-group-item">Counter Attack Power: 15</li>
                     </ul>
                 </div>
             </div>
             <div class="col">
                 <!-- Sidious Card -->
                 <div id="sidious" class="card h-100">
-                    <img src="/assets/images/Darth Sidious.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
-                    <div class="card-body text-center">
+                    <img src="/assets/images/Darth Sidious.jpg" class="card-img-top" alt="Darth Sidious">
+                    <div class="card-body">
                         <h5 class="card-title">Darth Sidious</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">H.P: 100</li>
-                        <li class="list-group-item">Attack Power: 5</li>
-                        <li class="list-group-item">Counter Attack Power: 10</li>
+                        <li id="sidiousHp" class="list-group-item">H.P: 100</li>
+                        <li id="sidiousAp" class="list-group-item">Attack Power: 5</li>
+                        <li id="sidiousCap" class="list-group-item">Counter Attack Power: 10</li>
                     </ul>
                 </div>
             </div>
@@ -84,22 +87,22 @@
         <!-- Player Name vs Opponent Name-->
         <div class="row">
             <div class="col">
-                <h1>Player</h1>
+                <h1 id="playerOneName">Player</h1>
             </div>
             <div class="col">
                 <h1>vs</h1>
             </div>
             <div class="col">
-                <h1>Opp</h1>
+                <h1 id="currentOpponentName">Opp</h1>
             </div>
         </div>
         <!-- Arena -->
         <div class="row">
             <div class="col">
                 <!-- Player -->
-                <div id="obi" class="card h-100 border-success">
+                <div id="playerOne" class="card h-100 border-success">
                     <img src="/assets/images/Obi-Wan Kenobi.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
-                    <div class="card-body text-center">
+                    <div class="card-body">
                         <h5 class="card-title">Obi-Wan Kenobi</h5>
                     </div>
                     <ul class="list-group list-group-flush">
@@ -115,7 +118,7 @@
             </div>
             <div class="col ">
                 <!-- Opponent -->
-                <div id="maul" class="card h-100 border-danger">
+                <div id="currentOpponent" class="card h-100 border-danger">
                     <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
                     <div class="card-body text-center">
                         <h5 class="card-title">Darth Maul</h5>
@@ -133,11 +136,13 @@
     <div class="container text-center">
         <h1>Graveyard</h1>
         <!-- Dead people -->
-        <div class="row text-muted">
+        <div id="graveyard" class="row text-muted ">
+            <div class="col">
+            </div>
             <div class="col-2">
                 <div id="maul" class="card h-100">
                     <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
-                    <div class="card-body text-center">
+                    <div class="card-body">
                         <h5 class="card-title">Darth Maul</h5>
                     </div>
                     <ul class="list-group list-group-flush">
@@ -145,6 +150,32 @@
                         <li class="list-group-item">Attack Power: 4</li>
                         <li class="list-group-item">Counter Attack Power: 15</li>
                     </ul>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    <!-- Game Over Modal -->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gameOverModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade text-center" id="gameOverModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h1 class="modal-title text-danger" id="modalLabel">Game Over</h1>
+                </div>
+                <div class="modal-body">
+                    <h2 id="gameOverDescription"> Winner! / Loser!</h2>
+                </div>
+                <div class="modal-footer justify-content-lg-around">
+                    <button id="restartButton" type="button" class="btn btn-success">Restart</button>
                 </div>
             </div>
         </div>
