@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/javascript/script.js" defer></script>
     <title>Star Wars Game</title>
@@ -19,7 +19,7 @@
 
 <body>
     <!-- Character Select -->
-    <div class="container-fluid text-center">
+    <div id="characterSelect" class="container-fluid text-center">
         <h1 class="text-center ">Character Select</h1>
         <div class="row">
             <div class="col">
@@ -97,20 +97,10 @@
             </div>
         </div>
         <!-- Arena -->
-        <div class="row">
+        <div id="arena" class="row">
             <div class="col">
                 <!-- Player -->
-                <div id="playerOne" class="card h-100 border-success">
-                    <img src="/assets/images/Obi-Wan Kenobi.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
-                    <div class="card-body">
-                        <h5 class="card-title">Obi-Wan Kenobi</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">H.P: 150</li>
-                        <li class="list-group-item">Attack Power: 8</li>
-                        <li class="list-group-item">Counter Attack Power: 12</li>
-                    </ul>
-                </div>
+                <div id="playerOne"></div>
             </div>
             <!-- ATTACK! button -->
             <div class="col m-auto">
@@ -118,28 +108,18 @@
             </div>
             <div class="col ">
                 <!-- Opponent -->
-                <div id="currentOpponent" class="card h-100 border-danger">
-                    <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Darth Maul</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">H.P: 125</li>
-                        <li class="list-group-item">Attack Power: 4</li>
-                        <li class="list-group-item">Counter Attack Power: 15</li>
-                    </ul>
-                </div>
+                <div id="currentOpponent"></div>
             </div>
         </div>
     </div>
     <!-- Graveyard -->
-    <div class="container text-center">
+    <div id="graveyard" class="container text-center">
         <h1>Graveyard</h1>
         <!-- Dead people -->
-        <div id="graveyard" class="row text-muted ">
-            <div class="col">
+        <div class="row text-muted ">
+            <div class=" col">
             </div>
-            <div class="col-2">
+            <!-- <div class="col-2">
                 <div id="maul" class="card h-100">
                     <img src="/assets/images/Darth Maul.jpg" class="card-img-top" alt="Obi-Wan Kenobi">
                     <div class="card-body">
@@ -151,7 +131,7 @@
                         <li class="list-group-item">Counter Attack Power: 15</li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <div class="col">
             </div>
         </div>
@@ -159,10 +139,10 @@
 
     <!-- Game Over Modal -->
 
-    <!-- Button trigger modal -->
+    <!-- Button trigger modal
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gameOverModal">
         Launch demo modal
-    </button>
+    </button> -->
 
     <!-- Modal -->
     <div class="modal fade text-center" id="gameOverModal" tabindex="-1" aria-labelledby="exampleModalLabel"

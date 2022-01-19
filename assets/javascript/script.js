@@ -30,13 +30,32 @@ const characters = [
   },
 ];
 // Variables for DOM manipulation
+const allCharacters = document.querySelectorAll(".card");
+const playerOne = document.querySelector("#playerOne");
+const opponent = document.querySelector("#currentOpponent");
 
 // Select Character
-const selectCharacter = () => {
-  // allow character cards to be clickable
-  // if no player is selected, then fill player slot
-  // if no opponent is selected, fill opponent slot
-};
+
+allCharacters.forEach((value, index, array) => {
+  const characterDiv = value;
+
+  function moveCharacterNode() {
+    if (playerOne.hasChildNodes() === false) {
+      playerOne.append(characterDiv);
+    } else if (opponent.hasChildNodes() === false) {
+      opponent.append(characterDiv);
+    } else {
+      console.log(
+        "youre ready for battle. defeat your opponent before selecting a new one!"
+      );
+    }
+  }
+  characterDiv.addEventListener("click", moveCharacterNode);
+});
+// allow character cards to be clickable
+
+// if no player is selected, then fill player slot
+// if no opponent is selected, fill opponent slot
 
 // arena
 const attack = () => {

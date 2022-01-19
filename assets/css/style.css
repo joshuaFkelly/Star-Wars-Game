@@ -9,3 +9,12 @@ body {
 #currentOpponent {
   border-width: 1rem;
 }
+#arena {
+  height: 350px;
+}
+#characterSelect {
+  height: 441px;
+}
+#graveyard {
+  height: 430px;
+}
