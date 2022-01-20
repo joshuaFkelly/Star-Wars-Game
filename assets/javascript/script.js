@@ -104,23 +104,16 @@ const attack = () => {
   // player clicks attack button which makes the player ap subtract from villain hp
   // each attack will add its own ap to itself(8+8+8+8), villain cap stays the same
   // if either player or vilain hp is brought to 0 or less than 0, game is over
-  if (!currentOpponent.hasChildNodes()) {
-    characterSelectWarning.textContent = "*Pick an Opp*";
-    characterSelectWarning.className = "fs-1 text-danger";
+  if (updatedPlayerHp <= 0) {
+    alert("You lose!");
+    window.location.reload();
   }
   if (updatedOpponentHp <= 0) {
     currentOpponent.classList.add("col-3");
     graveyard.append(currentOpponent);
     console.log("he need sum milk");
   }
-  if (!characterSelect.hasChildNodes()) {
-    console.log("You won!");
-    window.location.reload();
-  }
-  if (updatedPlayerHp <= 0) {
-    alert("You lose!");
-    window.location.reload();
-  }
+
   // if player hp reachs 0, player loses
   // if villain hp reachs 0, villain card is moved to graveyard(cards in graveyard are not clickable)
   // another villain must be selected
