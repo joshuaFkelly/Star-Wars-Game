@@ -33,30 +33,36 @@ const characters = [
 const allCharacters = document.querySelectorAll(".card");
 const playerOne = document.querySelector("#playerOne");
 const opponent = document.querySelector("#currentOpponent");
-
+const characterSelectWarning = document.querySelector("#warning");
+console.log(characterSelectWarning);
 // Select Character
 
 allCharacters.forEach((value, index, array) => {
   const characterDiv = value;
-
   function moveCharacterNode() {
-    if (playerOne.hasChildNodes() === false) {
+    if (!playerOne.hasChildNodes()) {
       playerOne.append(characterDiv);
-    } else if (opponent.hasChildNodes() === false) {
+    } else if (!opponent.hasChildNodes()) {
       opponent.append(characterDiv);
+    } else if (playerOne.hasChildNodes() && !opponent.hasChildNodes()) {
     } else {
       console.log(
         "youre ready for battle. defeat your opponent before selecting a new one!"
       );
     }
+    if (playerOne.hasChildNodes() && !opponent.hasChildNodes()) {
+      characterSelectWarning.textContent = "*Pick an Opp*";
+      characterSelectWarning.className = "fs-1 text-danger";
+    }
+    if (playerOne.hasChildNodes() && opponent.hasChildNodes()) {
+      characterSelectWarning.textContent = "";
+    }
   }
+
   characterDiv.addEventListener("click", moveCharacterNode);
+
+  console.log(array);
 });
-// allow character cards to be clickable
-
-// if no player is selected, then fill player slot
-// if no opponent is selected, fill opponent slot
-
 // arena
 const attack = () => {
   // player clicks attack button which makes the player ap subtract from villain hp
