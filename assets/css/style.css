@@ -2,7 +2,7 @@ img {
   height: 10rem;
 }
 body {
-  background-image: url(/assets/images/background.jfif);
+  /* background-image: url(/assets/images/background.jfif); */
   background-size: cover;
 }
 #playerOne,
